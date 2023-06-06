@@ -1,3 +1,4 @@
+import Link from "next/link";
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 async function getData() {
   const res = await fetch("https://api.publicapis.org/entries");
@@ -14,12 +15,12 @@ async function getData() {
 }
 export default async function Page() {
   const data = await getData();
-  // this will console log on the server
-  console.log(data);
+
   // make a list with first 100 users
-  const users = data.entries.slice(0, 100);
+  const users = data.entries.slice(0, 10);
   return (
     <div>
+      <Link href="/dashboard/posts">Go to posts intercepted</Link>
       <h1>Public APIs</h1>
       <ul>
         {users.map((user) => (
