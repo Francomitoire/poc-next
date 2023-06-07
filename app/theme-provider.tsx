@@ -9,5 +9,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log("loading layout");
   return <ChakraProvider>{children} </ChakraProvider>;
 }

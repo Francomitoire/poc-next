@@ -20,7 +20,6 @@ export default async function Page() {
   const users = data.entries.slice(0, 10);
   return (
     <div>
-      <Link href="/dashboard/posts">Go to posts intercepted</Link>
       <h1>Public APIs</h1>
       <ul>
         {users.map((user) => (

@@ -17,7 +17,7 @@ export default function CustomModal() {
     <>
       <Button onClick={onOpen}>Open Modal</Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={true} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
