@@ -1,9 +1,8 @@
-import Link from "next/link";
-import { GET } from "@/app/api/users/route";
-// `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
+import UsersList from "./(components)/UsersList.component";
+
 async function getData() {
   try {
-    const res = await GET();
+    const res = await fetch("http://localhost:3000/api/users");
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
       throw new Error("Failed to fetch data");
@@ -15,11 +14,6 @@ async function getData() {
 }
 export default async function Page() {
   const data = await getData();
-  console.log("DATA ON PAGE", data);
-  // make a list with first 100 users
-  return (
-    <div>
-      <h1>users</h1>
-    </div>
-  );
+  const { users } = data;
+  return <UsersList users={users} />;
 }
