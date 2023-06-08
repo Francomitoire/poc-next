@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import UsersList from "../(components)/UsersList.component";
+import UsersList from "@/app/components/UsersList.component";
 
 async function getData() {
   try {
@@ -17,7 +17,7 @@ async function getData() {
 }
 export default async function Page() {
   const data = await getData();
-  const { users } = data;
+  const users = data?.users ?? [];
   return (
     <div>
       <h1>Users</h1>
