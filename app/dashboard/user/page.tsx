@@ -21,11 +21,6 @@ export default async function Page() {
   return (
     <div>
       <h1>Public APIs</h1>
-      <ul>
-        {users.map((user) => (
-          <li key={user.API}>{user.API}</li>
-        ))}
-      </ul>
     </div>
   );
 }
