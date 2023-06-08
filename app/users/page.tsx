@@ -21,9 +21,7 @@ export default async function Page() {
   return (
     <div>
       <h1>Users</h1>
-      <Suspense fallback={<p>Loading users..</p>}>
-        <UsersList users={users} />
-      </Suspense>
+      <UsersList users={users} />
     </div>
   );
 }
