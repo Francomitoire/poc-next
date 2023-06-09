@@ -1,4 +1,5 @@
 import { LikeButton } from "@/app/components/likeButton/LikeButton";
+import Image from "next/image";
 import Link from "next/link";
 
 const fechtPosts = () => {
@@ -30,6 +31,12 @@ export default async function PostPage() {
             }}
           >
             <Link href={`/dashboard/posts/${post.id}`}>
+              <Image
+                alt={post.name}
+                src={"https://api.multiavatar.com/Binx Bond.svg"}
+                width={50}
+                height={50}
+              />
               <h2 style={{ fontWeight: 600, color: "#2947a2" }}>
                 {post.title}
               </h2>
