@@ -21,21 +21,22 @@ export default async function PostPage() {
         }}
       >
         {posts.slice(0, 5).map((post: any) => (
-          <Link key={post.id} href={`/dashboard/posts/${post.id}`}>
-            <article
-              style={{
-                padding: "25px",
-                marginBottom: "5px",
-                backgroundColor: "#FFFFFF",
-              }}
-            >
+          <article
+            key={post.id}
+            style={{
+              padding: "25px",
+              marginBottom: "5px",
+              backgroundColor: "#FFFFFF",
+            }}
+          >
+            <Link href={`/dashboard/posts/${post.id}`}>
               <h2 style={{ fontWeight: 600, color: "#2947a2" }}>
                 {post.title}
               </h2>
               <p>{post.body}</p>
-              <LikeButton id={post.id} />
-            </article>
-          </Link>
+            </Link>
+            <LikeButton id={post.id} />
+          </article>
         ))}
       </section>
     </>
