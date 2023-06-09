@@ -3,7 +3,7 @@ import UsersList from "@/app/components/UsersList.component";
 
 async function getData() {
   try {
-    const res = await fetch("http://localhost:3000/api/users", {
+    const res = await fetch(`${process.env.NEXT_API_URL}/users`, {
       cache: "no-cache",
     });
     if (!res.ok) {
