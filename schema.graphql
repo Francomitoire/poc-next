@@ -1,0 +1,23 @@
+# OBJECT TYPES
+
+type User {
+  id: Int
+  email: String
+  name: String
+  lastName: String
+  age: Int
+}
+
+# QUERY TYPES
+
+type Query {
+  hello: String
+  user: String
+  listUsers: [User]
+}
+
+# MUTATION TYPES
+
+type Mutation {
+  createUser(name: String!, email: String!): User!
+}
