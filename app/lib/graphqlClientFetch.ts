@@ -1,4 +1,8 @@
 import { redirect } from "next/navigation";
+
+// TODO FRANCO: create a graphqlBackendFetch
+// add example of how to use both
+// use react query
 export const graphqlClientFetch = (query: String, variables?: any) =>
   fetch(`${process.env.NEXT_PUBLIC_GRAPHQL_URL}/graphql`, {
     method: "POST",
