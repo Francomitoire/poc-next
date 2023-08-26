@@ -69,6 +69,10 @@ To get the project up and running, follow these steps:
 
    - After resetting the schema, you can seed the database with your user information by following the steps mentioned earlier.
 
+     ```bash
+     yarn seed-database
+     ```
+
 7. **Start the development server:**
 
    ```bash
