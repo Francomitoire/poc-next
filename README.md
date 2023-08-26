@@ -1,6 +1,6 @@
 # Project Name: POC Next
 
-A proof-of-concept (POC) project built using Next.js and various complementary technologies. This project demonstrates how to create a modern web application with features such as server-side rendering, GraphQL integration, Chakra UI for styling, and Firebase integration.
+A proof-of-concept (POC) project built using Next.js and various complementary technologies. This project demonstrates how to create a modern web application with features such as server-side rendering, GraphQL integration, Chakra UI for styling, and Firebase + Google Authentication.
 
 ## Prerequisites
 
